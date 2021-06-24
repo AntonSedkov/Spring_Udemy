@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder
+            location="classpath:app.properties"/>
+
+    <bean id="petOne"
+          class="anton.sample.animals.model.Cat"
+          scope="singleton">
+    </bean>
+
+    <bean id="petTwo"
+          class="anton.sample.animals.model.Dog"
+          scope="prototype">
+    </bean>
+
+    <bean id="personOne"
+          class="anton.sample.animals.model.Person">
+        <constructor-arg ref="petOne"/>
+    </bean>
+
+    <bean id="personTwo"
+          class="anton.sample.animals.model.Person">
+        <property name="pet" ref="petTwo"/>
+        <property name="surname" value="${person.surname}"/>
+        <property name="age" value="${person.age}"/>
+    </bean>
+
+</beans>
