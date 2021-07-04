@@ -17,6 +17,8 @@ public class AnnoTest {
 
         PersonAnno person = context.getBean("personBean", PersonAnno.class);
         person.sayHi();
+        System.out.println(person.getAge());
+        System.out.println(person.getSurname());
 
         context.close();
     }

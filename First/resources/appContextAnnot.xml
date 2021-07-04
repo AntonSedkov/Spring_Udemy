@@ -8,5 +8,6 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:component-scan base-package="anton.sample.animals"/>
+    <context:property-placeholder location="classpath:app.properties"/>
 
 </beans>
