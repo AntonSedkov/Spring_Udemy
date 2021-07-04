@@ -1,5 +1,6 @@
 package anton.sample.animals.modelAnno;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Component;
  */
 
 @Component(/*"catBean"*/)
+@Scope("prototype")
 //default bean name: Cat->cat; CatMea->catMea; CATme->CATme
 public class CatAnno implements PetActionAnno {
 

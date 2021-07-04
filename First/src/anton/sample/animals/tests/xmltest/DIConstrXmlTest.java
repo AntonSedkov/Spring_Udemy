@@ -1,4 +1,4 @@
-package anton.sample.animals.tests.annotest.xmltest;
+package anton.sample.animals.tests.xmltest;
 
 import anton.sample.animals.model.Person;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

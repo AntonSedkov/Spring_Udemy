@@ -1,6 +1,5 @@
 package anton.sample.animals.tests.annotest;
 
-import anton.sample.animals.modelAnno.CatAnno;
 import anton.sample.animals.modelAnno.PersonAnno;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

@@ -17,12 +17,12 @@ public class Dog implements PetAction {
 
     //для prototype - destroy метод не вызывается
     //может быть private, protected - без параметров - может иметь return
-    public void init(){
+    public void init() {
         System.out.println("Dog init");
     }
 
     //может быть private, protected - без параметров - может иметь return
-    public void destroy(){
+    public void destroy() {
         System.out.println("Dog destroy");
     }
 }
