@@ -1,9 +1,9 @@
-package anton.sample.animals.tests.xmltest;
+package anton.sample.ioc_di.animals.tests.xmltest;
 
-import anton.sample.animals.model.Cat;
-import anton.sample.animals.model.Dog;
-import anton.sample.animals.model.Person;
-import anton.sample.animals.model.PetAction;
+import anton.sample.ioc_di.animals.model.Cat;
+import anton.sample.ioc_di.animals.model.Dog;
+import anton.sample.ioc_di.animals.model.Person;
+import anton.sample.ioc_di.animals.model.PetAction;
 
 /**
  * User: Sedkov Anton

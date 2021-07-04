@@ -1,4 +1,4 @@
-package anton.sample.animals.model;
+package anton.sample.ioc_di.animals.model;
 
 import org.springframework.beans.factory.annotation.Value;
 

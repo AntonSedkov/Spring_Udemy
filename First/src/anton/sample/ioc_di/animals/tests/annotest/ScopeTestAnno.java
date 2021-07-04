@@ -1,7 +1,7 @@
-package anton.sample.animals.tests.annotest;
+package anton.sample.ioc_di.animals.tests.annotest;
 
-import anton.sample.animals.modelAnno.CatAnno;
-import anton.sample.animals.modelAnno.DogAnno;
+import anton.sample.ioc_di.animals.modelAnno.CatAnno;
+import anton.sample.ioc_di.animals.modelAnno.DogAnno;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**

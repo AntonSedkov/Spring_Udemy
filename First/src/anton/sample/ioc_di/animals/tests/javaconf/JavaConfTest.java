@@ -1,10 +1,8 @@
-package anton.sample.animals.tests.javaconf;
+package anton.sample.ioc_di.animals.tests.javaconf;
 
-import anton.sample.animals.config.AppConfig;
-import anton.sample.animals.config.SecondConfig;
-import anton.sample.animals.model.Person;
-import anton.sample.animals.model.PetAction;
-import anton.sample.animals.modelAnno.PersonAnno;
+import anton.sample.ioc_di.animals.config.SecondConfig;
+import anton.sample.ioc_di.animals.model.Person;
+import anton.sample.ioc_di.animals.model.PetAction;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

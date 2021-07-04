@@ -1,6 +1,6 @@
-package anton.sample.animals.tests.xmltest;
+package anton.sample.ioc_di.animals.tests.xmltest;
 
-import anton.sample.animals.model.Person;
+import anton.sample.ioc_di.animals.model.Person;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**

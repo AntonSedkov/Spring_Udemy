@@ -11,24 +11,24 @@
             location="classpath:app.properties"/>
 
     <bean id="petOne"
-          class="anton.sample.animals.model.Cat"
+          class="anton.sample.ioc_di.animals.model.Cat"
           scope="singleton">
     </bean>
 
     <bean id="petTwo"
-          class="anton.sample.animals.model.Dog"
+          class="anton.sample.ioc_di.animals.model.Dog"
           scope="prototype"
           init-method="init"
           destroy-method="destroy">
     </bean>
 
     <bean id="personOne"
-          class="anton.sample.animals.model.Person">
+          class="anton.sample.ioc_di.animals.model.Person">
         <constructor-arg ref="petOne"/>
     </bean>
 
     <bean id="personTwo"
-          class="anton.sample.animals.model.Person">
+          class="anton.sample.ioc_di.animals.model.Person">
         <property name="pet" ref="petTwo"/>
         <property name="surname" value="${person.surname}"/>
         <property name="age" value="${person.age}"/>

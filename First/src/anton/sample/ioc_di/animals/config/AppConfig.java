@@ -1,4 +1,4 @@
-package anton.sample.animals.config;
+package anton.sample.ioc_di.animals.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

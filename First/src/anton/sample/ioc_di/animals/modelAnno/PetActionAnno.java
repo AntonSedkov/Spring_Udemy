@@ -1,4 +1,4 @@
-package anton.sample.animals.modelAnno;
+package anton.sample.ioc_di.animals.modelAnno;
 
 /**
  * User: Sedkov Anton

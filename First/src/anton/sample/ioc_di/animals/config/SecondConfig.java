@@ -1,8 +1,8 @@
-package anton.sample.animals.config;
+package anton.sample.ioc_di.animals.config;
 
-import anton.sample.animals.model.Cat;
-import anton.sample.animals.model.Person;
-import anton.sample.animals.model.PetAction;
+import anton.sample.ioc_di.animals.model.Cat;
+import anton.sample.ioc_di.animals.model.Person;
+import anton.sample.ioc_di.animals.model.PetAction;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
