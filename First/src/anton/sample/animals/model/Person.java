@@ -1,12 +1,16 @@
 package anton.sample.animals.model;
 
+import org.springframework.beans.factory.annotation.Value;
+
 /**
  * User: Sedkov Anton
  * Date: 24.06.2021
  */
 public class Person {
     private PetAction pet;
+    @Value("${person.surname}")
     private String surname;
+    @Value("${person.age}")
     private int age;
 
     public Person() {
