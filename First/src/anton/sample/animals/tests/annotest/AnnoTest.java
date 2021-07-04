@@ -12,8 +12,8 @@ public class AnnoTest {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("appContextAnnot.xml");
-        CatAnno cat = context.getBean(/*"catBean"*/ "catAnno", CatAnno.class);
-        cat.action();
+        /*CatAnno cat = context.getBean(*//*"catBean"*//* "catAnno", CatAnno.class);
+        cat.action();*/
 
         PersonAnno person = context.getBean("personBean", PersonAnno.class);
         person.sayHi();

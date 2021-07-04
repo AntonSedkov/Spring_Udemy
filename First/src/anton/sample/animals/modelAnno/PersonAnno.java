@@ -1,7 +1,7 @@
 package anton.sample.animals.modelAnno;
 
-import anton.sample.animals.model.PetAction;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,7 +11,8 @@ import org.springframework.stereotype.Component;
 @Component("personBean")
 public class PersonAnno {
 
-    @Autowired
+    /*  @Autowired
+      @Qualifier("dogAnno")*/
     private PetActionAnno pet;
     private String surname;
     private int age;
@@ -19,14 +20,15 @@ public class PersonAnno {
     public PersonAnno() {
         System.out.println("person without pet is created");
     }
-/*
-    @Autowired
-    public PersonAnno(PetActionAnno pet) {
+
+/*    @Autowired
+    public PersonAnno(@Qualifier("catAnno") PetActionAnno pet) {
         System.out.println("person is created");
         this.pet = pet;
     }*/
 
-    /* @Autowired*/
+    @Autowired
+    @Qualifier("dogAnno")
     public void setPet(PetActionAnno pet) {
         System.out.println("Set pet");
         this.pet = pet;

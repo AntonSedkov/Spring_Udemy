@@ -1,11 +1,13 @@
 package anton.sample.animals.modelAnno;
 
-import anton.sample.animals.model.PetAction;
+import org.springframework.stereotype.Component;
 
 /**
  * User: Sedkov Anton
  * Date: 24.06.2021
  */
+
+@Component
 public class DogAnno implements PetActionAnno {
 
     public DogAnno() {
@@ -19,12 +21,12 @@ public class DogAnno implements PetActionAnno {
 
     //для prototype - destroy метод не вызывается
     //может быть private, protected - без параметров - может иметь return
-    public void init(){
+    public void init() {
         System.out.println("Dog init");
     }
 
     //может быть private, protected - без параметров - может иметь return
-    public void destroy(){
+    public void destroy() {
         System.out.println("Dog destroy");
     }
 }
