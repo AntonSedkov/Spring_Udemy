@@ -17,7 +17,9 @@
 
     <bean id="petTwo"
           class="anton.sample.animals.model.Dog"
-          scope="prototype">
+          scope="prototype"
+          init-method="init"
+          destroy-method="destroy">
     </bean>
 
     <bean id="personOne"

@@ -1,22 +1,22 @@
-package anton.sample.animals;
+package anton.sample.animals.tests.annotest.xmltest;
 
-import anton.sample.animals.model.Person;
+import anton.sample.animals.model.Dog;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * User: Sedkov Anton
- * Date: 24.06.2021
+ * Date: 26.06.2021
  */
-public class DISetterXmlTest {
+public class InitDestroyTest {
     public static void main(String[] args) {
 
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Person person = context.getBean("personTwo", Person.class);
-        person.sayHi();
-        System.out.println(person.getSurname() + " " + person.getAge());
+        Dog dog = context.getBean("petTwo", Dog.class);
+        dog.action();
 
         context.close();
     }
+
 }

@@ -1,4 +1,4 @@
-package anton.sample.animals;
+package anton.sample.animals.tests.annotest.xmltest;
 
 import anton.sample.animals.model.Cat;
 import anton.sample.animals.model.Dog;

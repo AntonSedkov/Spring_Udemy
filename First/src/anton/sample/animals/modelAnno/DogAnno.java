@@ -1,12 +1,14 @@
-package anton.sample.animals.model;
+package anton.sample.animals.modelAnno;
+
+import anton.sample.animals.model.PetAction;
 
 /**
  * User: Sedkov Anton
  * Date: 24.06.2021
  */
-public class Dog implements PetAction {
+public class DogAnno implements PetActionAnno {
 
-    public Dog() {
+    public DogAnno() {
         System.out.println("Dog is created");
     }
 
