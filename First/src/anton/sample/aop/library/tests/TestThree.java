@@ -14,8 +14,13 @@ public class TestThree {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         UniverLibrary univerLibrary = context.getBean("univerLibrary", UniverLibrary.class);
-        String bookName = univerLibrary.returnBook();
-        System.out.println("Returned book = " + bookName);
+        try {
+            String bookName = univerLibrary.returnBook();
+            System.out.println("Returned book = " + bookName);
+        }
+        catch (Throwable e) {
+            System.out.println("Exception in main: " + e);
+        }
 
         context.close();
         System.out.println("Main ends");
