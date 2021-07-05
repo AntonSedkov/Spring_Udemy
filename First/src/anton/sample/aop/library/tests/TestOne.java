@@ -21,7 +21,7 @@ public class TestOne {
 
         univerLibrary.addBook("Anton", book);
         univerLibrary.addMagazine();
-        
+
 
       /*  univerLibrary.getBook();
         univerLibrary.returnBook();

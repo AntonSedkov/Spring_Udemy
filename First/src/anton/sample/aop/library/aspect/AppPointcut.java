@@ -8,7 +8,8 @@ import org.aspectj.lang.annotation.Pointcut;
  */
 public class AppPointcut {
 
-    @Pointcut("execution(* add*(..))")
+    //rename "abc" onto "add"
+    @Pointcut("execution(* abc*(..))")
     public void allAddMethods() {
     }
 
