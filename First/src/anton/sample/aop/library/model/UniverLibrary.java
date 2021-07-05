@@ -15,23 +15,32 @@ public class UniverLibrary extends AbstractLibrary {
         System.out.println("We has got a book from the university.");
     }
 
-
-    public void getBook(Book book) {
+/*    public void getBook(Book book) {
         System.out.println("We has got the book: " + book.getName() + " from the university.");
-    }
+    }*/
 
 
     public void getMagazine() {
         System.out.println("We has got a magazine from the university.");
     }
 
-    public void getMagazine(int a) {
+ /*   public void getMagazine(int a) {
         System.out.println("We has got a magazine from the university.");
-    }
+    }*/
 
-    public String returnBook() {
+    public void returnBook() {
         System.out.println("We has returned a book to the university.");
-        return "ok";
     }
 
+    public void returnMagazine() {
+        System.out.println("We has returned a magazine to the university.");
+    }
+
+    public void addBook(){
+        System.out.println("We has added a book to the university library.");
+    }
+
+    public void addMagazine(){
+        System.out.println("We has added a magazine to the university library.");
+    }
 }

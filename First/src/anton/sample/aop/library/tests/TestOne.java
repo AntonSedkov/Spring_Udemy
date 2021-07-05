@@ -14,8 +14,19 @@ public class TestOne {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         UniverLibrary univerLibrary = context.getBean("univerLibrary", UniverLibrary.class);
-        Book book = context.getBean("book", Book.class);
-        univerLibrary.getBook(book);
+  //      Book book = context.getBean("book", Book.class);
+
+
+        univerLibrary.getBook();
+        univerLibrary.getMagazine();
+
+
+      /*  univerLibrary.getBook();
+        univerLibrary.returnBook();
+        univerLibrary.addBook();
+        univerLibrary.getMagazine();
+        univerLibrary.returnMagazine();
+        univerLibrary.addMagazine();*/
 
       /*  SchoolLibrary schoolLibrary = context.getBean("schoolLibrary", SchoolLibrary.class);
         schoolLibrary.getBook();
@@ -24,7 +35,7 @@ public class TestOne {
 
         /*  univerLibrary.returnBook();*/
 
-        /*univerLibrary.getMagazine();
+        /*
         univerLibrary.getMagazine(3);
 */
         context.close();
