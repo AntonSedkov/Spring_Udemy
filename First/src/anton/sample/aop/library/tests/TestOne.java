@@ -14,12 +14,14 @@ public class TestOne {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         UniverLibrary univerLibrary = context.getBean("univerLibrary", UniverLibrary.class);
-  //      Book book = context.getBean("book", Book.class);
+        Book book = context.getBean("book", Book.class);
 
 
         univerLibrary.getBook();
-        univerLibrary.getMagazine();
 
+        univerLibrary.addBook("Anton", book);
+        univerLibrary.addMagazine();
+        
 
       /*  univerLibrary.getBook();
         univerLibrary.returnBook();

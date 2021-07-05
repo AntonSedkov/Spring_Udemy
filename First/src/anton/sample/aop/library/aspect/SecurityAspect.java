@@ -12,12 +12,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-@Order(20)
+@Order(1)
 public class SecurityAspect {
 
-    @Before("anton.sample.aop.library.aspect.AppPointcut.allGetMethods()")
-    public void beforeGetSecurityAdvice() {
+    @Before("anton.sample.aop.library.aspect.AppPointcut.allAddMethods()")
+    public void beforeAddSecurityAdvice() {
         System.out.println("beforeGetSecurityAdvice: check rights.");
+        System.out.println("--------------------------------------");
     }
 
 }

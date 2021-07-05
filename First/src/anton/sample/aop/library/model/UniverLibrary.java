@@ -13,6 +13,7 @@ public class UniverLibrary extends AbstractLibrary {
     @Override
     public void getBook() {
         System.out.println("We has got a book from the university.");
+        System.out.println("--------------------------------------");
     }
 
 /*    public void getBook(Book book) {
@@ -22,6 +23,7 @@ public class UniverLibrary extends AbstractLibrary {
 
     public void getMagazine() {
         System.out.println("We has got a magazine from the university.");
+        System.out.println("--------------------------------------");
     }
 
  /*   public void getMagazine(int a) {
@@ -30,17 +32,21 @@ public class UniverLibrary extends AbstractLibrary {
 
     public void returnBook() {
         System.out.println("We has returned a book to the university.");
+        System.out.println("--------------------------------------");
     }
 
     public void returnMagazine() {
         System.out.println("We has returned a magazine to the university.");
+        System.out.println("--------------------------------------");
     }
 
-    public void addBook(){
+    public void addBook(String personName, Book book){
         System.out.println("We has added a book to the university library.");
+        System.out.println("--------------------------------------");
     }
 
     public void addMagazine(){
         System.out.println("We has added a magazine to the university library.");
+        System.out.println("--------------------------------------");
     }
 }

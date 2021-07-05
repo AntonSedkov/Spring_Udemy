@@ -12,12 +12,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-@Order(-10)
+@Order(200)
 public class ExceptionHandlingAspect {
 
-    @Before("anton.sample.aop.library.aspect.AppPointcut.allGetMethods()")
-    public void beforeGetExceptionHandlingAdvice() {
+    @Before("anton.sample.aop.library.aspect.AppPointcut.allAddMethods()")
+    public void beforeAddExceptionHandlingAdvice() {
         System.out.println("beforeGetExceptionHandlingAdvice");
+        System.out.println("--------------------------------------");
     }
 
 }

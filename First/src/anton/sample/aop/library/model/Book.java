@@ -14,7 +14,21 @@ public class Book {
     @Value("To kill a mockingbird")
     private String name;
 
+    @Value("Harper Lee")
+    private String author;
+
+    @Value("1960")
+    private int year;
+
     public String getName() {
         return name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getYear() {
+        return year;
     }
 }
