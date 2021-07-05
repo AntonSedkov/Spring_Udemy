@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class NewLoggingAspect {
 
-    @Around("execution(public String returnBook())")
+/*    @Around("execution(public String returnBook())")
     public Object aroundReturnBookLoggingAdvice(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         System.out.println("aroundReturnBookLoggingAdvice: try to return");
 
@@ -29,6 +29,26 @@ public class NewLoggingAspect {
         System.out.println("returnBook method working " + (end - begin) + "ms");
 
         return targetMethodResult;
+    }*/
+
+
+    @Around("execution(public String returnBook())")
+    public Object aroundReturnBookLoggingAdvice(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+        System.out.println("aroundReturnBookLoggingAdvice: try to return");
+
+        Object targetMethodResult = null;
+        try {
+            targetMethodResult = proceedingJoinPoint.proceed();
+        } catch (Throwable e) {
+            System.out.println("Check Exception: " + e);
+            throw e;
+            //targetMethodResult = "Unknown";
+        }
+
+        System.out.println("aroundReturnBookLoggingAdvice: book was returned");
+
+        return targetMethodResult;
     }
+
 
 }

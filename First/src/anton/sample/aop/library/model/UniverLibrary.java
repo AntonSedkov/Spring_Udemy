@@ -31,6 +31,7 @@ public class UniverLibrary extends AbstractLibrary {
     }*/
 
     public String returnBook() {
+        int a = 10 / 0;
         System.out.println("We has returned a book to the university.");
         return "War and peace";
     }
@@ -40,12 +41,12 @@ public class UniverLibrary extends AbstractLibrary {
         System.out.println("--------------------------------------");
     }
 
-    public void addBook(String personName, Book book){
+    public void addBook(String personName, Book book) {
         System.out.println("We has added a book to the university library.");
         System.out.println("--------------------------------------");
     }
 
-    public void addMagazine(){
+    public void addMagazine() {
         System.out.println("We has added a magazine to the university library.");
         System.out.println("--------------------------------------");
     }
