@@ -9,7 +9,7 @@ import org.hibernate.cfg.Configuration;
  * User: Sedkov Anton
  * Date: 06.07.2021
  */
-public class TestOne {
+public class Test5 {
     public static void main(String[] args) {
         SessionFactory sessionFactory = new Configuration()
                 .configure("hibernate.cfg.xml")
@@ -18,11 +18,18 @@ public class TestOne {
 
         try {
             Session session = sessionFactory.getCurrentSession();
-            Employee employee = new Employee("Lex", "Liutor'", "IT ", 300);
             session.beginTransaction();
-            session.save(employee);
+
+            /*Employee employee = session.get(Employee.class, 2);
+            session.delete(employee);*/
+
+            session.createQuery("delete Employee where name='Lex'")
+                    .executeUpdate();
+
             session.getTransaction().commit();
-            System.out.println(employee);
+
+            System.out.println("Done");
+
         } finally {
             sessionFactory.close();
         }

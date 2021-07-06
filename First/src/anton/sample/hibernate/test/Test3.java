@@ -11,7 +11,7 @@ import java.util.List;
  * User: Sedkov Anton
  * Date: 06.07.2021
  */
-public class TestThree {
+public class Test3 {
     public static void main(String[] args) {
         SessionFactory sessionFactory = new Configuration()
                 .configure("hibernate.cfg.xml")
