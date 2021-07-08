@@ -1,4 +1,4 @@
-package anton.sample.hibernate.test_one_to_many;
+package anton.sample.hibernate.test3_one_to_many;
 
 import anton.sample.hibernate.entity3_one_to_many_bi.Department;
 import anton.sample.hibernate.entity3_one_to_many_bi.Employee3;
