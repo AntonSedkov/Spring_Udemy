@@ -1,4 +1,4 @@
-package anton.sample.hibernate.entity2;
+package anton.sample.hibernate.entity2_one_to_one;
 
 import javax.persistence.*;
 import java.util.StringJoiner;
@@ -92,37 +92,11 @@ public class Employee2 {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Employee2 employee2 = (Employee2) o;
-
-        if (id != employee2.id) return false;
-        if (salary != employee2.salary) return false;
-        if (name != null ? !name.equals(employee2.name) : employee2.name != null) return false;
-        if (surname != null ? !surname.equals(employee2.surname) : employee2.surname != null) return false;
-        if (department != null ? !department.equals(employee2.department) : employee2.department != null) return false;
-        return empDetail != null ? empDetail.equals(employee2.empDetail) : employee2.empDetail == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (surname != null ? surname.hashCode() : 0);
-        result = 31 * result + (department != null ? department.hashCode() : 0);
-        result = 31 * result + salary;
-        result = 31 * result + (empDetail != null ? empDetail.hashCode() : 0);
-        return result;
-    }
-
-    @Override
     public String toString() {
         return new StringJoiner(", ", Employee2.class.getSimpleName() + "[", "]")
                 .add("id=" + id)
                 .add("name='" + name + "'")
-                .add("surname='" + surname + "'")
+                 .add("surname='" + surname + "'")
                 .add("department='" + department + "'")
                 .add("salary=" + salary)
                 .add("empDetail=" + empDetail)

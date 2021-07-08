@@ -1,8 +1,7 @@
-package anton.sample.hibernate.test_2;
+package anton.sample.hibernate.test2_one_to_one;
 
-import anton.sample.hibernate.entity.Employee;
-import anton.sample.hibernate.entity2.Detail;
-import anton.sample.hibernate.entity2.Employee2;
+import anton.sample.hibernate.entity2_one_to_one.Detail;
+import anton.sample.hibernate.entity2_one_to_one.Employee2;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
