@@ -2,10 +2,8 @@ package anton.sample.springmvc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * User: Sedkov Anton
@@ -16,13 +14,33 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/emp")
 public class AppController {
 
+    @RequestMapping("/")
+    public String showFirstView() {
+        return "first-view";
+    }
+
     @RequestMapping("/askDetails")
     public String askDetails(Model model) {
+
+/*        Employee employee = new Employee();
+        employee.setName("John");
+        employee.setSurname("Dow");
+        employee.setSalary(1000);
+        model.addAttribute("employee", employee);*/
+
         model.addAttribute("employee", new Employee());
         return "ask-details";
     }
 
+    @RequestMapping("/showDetails")
+    public String showDetails(@ModelAttribute("employee") Employee emp) {
 
+        emp.setName("Mr. " + emp.getName());
+        emp.setSurname(emp.getSurname() + "!");
+        emp.setSalary(emp.getSalary() * 2);
+
+        return "show-details";
+    }
 
     /*@RequestMapping("/")
     public String showFirstView() {
