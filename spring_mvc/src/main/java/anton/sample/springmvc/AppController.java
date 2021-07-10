@@ -2,8 +2,11 @@ package anton.sample.springmvc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.validation.Valid;
 
 /**
  * User: Sedkov Anton
@@ -33,13 +36,23 @@ public class AppController {
     }
 
     @RequestMapping("/showDetails")
-    public String showDetails(@ModelAttribute("employee") Employee emp) {
+    public String showDetails(
+            @Valid
+            @ModelAttribute("employee")
+                    Employee emp,
+            BindingResult bindingResult) {
 
-        emp.setName("Mr. " + emp.getName());
+        String targetPage = "show-details";
+
+        if (bindingResult.hasErrors()) {
+            targetPage = "ask-details";
+        }
+
+       /* emp.setName("Mr. " + emp.getName());
         emp.setSurname(emp.getSurname() + "!");
         emp.setSalary(emp.getSalary() * 2);
-
-        return "show-details";
+*/
+        return targetPage;
     }
 
     /*@RequestMapping("/")

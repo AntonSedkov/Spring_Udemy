@@ -14,10 +14,13 @@
 <form:form action="showDetails" modelAttribute="employee">
 
     Name <form:input path="name"/>
+    <form:errors path="name"/>
     <br/><br/>
     Surname <form:input path="surname"/>
+    <form:errors path="surname"/>
     <br/><br/>
     Salary <form:input path="salary"/>
+    <form:errors path="salary"/>
     <br/><br/>
     Department
     <form:select path="department">
@@ -43,8 +46,17 @@
 
     <%-- EN <form:checkbox path="languages" value="English"/>
      DE <form:checkbox path="languages" value="Deutsch"/>
-     ES <form:checkbox path="languages" value="Español"/>--%>
+     ES <form:checkbox path="languages" value="Espanol"/>--%>
     <br/><br/>
+
+    Phone Number: <form:input path="phoneNumber"/>
+    <form:errors path="phoneNumber"/>
+    <br/><br/>
+
+    Email: <form:input path="email"/>
+    <form:errors path="email"/>
+    <br/><br/>
+
 
 
     <br/><br/>

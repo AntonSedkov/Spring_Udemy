@@ -18,6 +18,12 @@
 Your surname: ${employee.surname}
 <br/>
 <br/>
+Your phone number: ${employee.phoneNumber}
+<br/>
+<br/>
+Your email: ${employee.email}
+<br/>
+<br/>
 Your salary: ${employee.salary}
 <br/>
 <br/>
