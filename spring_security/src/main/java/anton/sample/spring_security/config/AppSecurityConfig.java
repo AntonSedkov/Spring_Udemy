@@ -1,10 +1,12 @@
 package anton.sample.spring_security.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.User;
+
+import javax.sql.DataSource;
 
 /**
  * User: Sedkov Anton
@@ -14,14 +16,19 @@ import org.springframework.security.core.userdetails.User;
 @EnableWebSecurity
 public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    @Autowired
+    private DataSource dataSource;
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        User.UserBuilder userBuilder = User.withDefaultPasswordEncoder();
 
+        auth.jdbcAuthentication().dataSource(dataSource);
+
+        /*User.UserBuilder userBuilder = User.withDefaultPasswordEncoder();
         auth.inMemoryAuthentication()
                 .withUser(userBuilder.username("chuck").password("chuck").roles("EMPLOYEE"))
                 .withUser(userBuilder.username("lena").password("lena").roles("HR"))
-                .withUser(userBuilder.username("ivan").password("ivan").roles("HR", "MANAGER"));
+                .withUser(userBuilder.username("ivan").password("ivan").roles("HR", "MANAGER"));*/
     }
 
     @Override
@@ -32,4 +39,5 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/manager_info/**").hasRole("MANAGER")
                 .and().formLogin().permitAll();
     }
+
 }
