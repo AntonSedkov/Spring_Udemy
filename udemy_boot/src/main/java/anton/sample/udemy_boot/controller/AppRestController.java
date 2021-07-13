@@ -24,7 +24,7 @@ public class AppRestController {
         List<Employee> allEmps = employeeService.getAllEmployees();
         return allEmps;
     }
-/*
+
     @GetMapping("/employees/{id}")
     public Employee getEmployee(@PathVariable int id) {
         Employee employee = employeeService.getEmployee(id);
@@ -46,12 +46,8 @@ public class AppRestController {
 
     @DeleteMapping("/employees/{id}")
     public String deleteEmployee(@PathVariable int id) {
-
-        Employee employee = employeeService.getEmployee(id);
-
-
         employeeService.deleteEmployee(id);
         return String.format("Employee with ID = %d was deleted.", id);
-    }*/
+    }
 
 }
